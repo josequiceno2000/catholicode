@@ -1,0 +1,14 @@
+body {
+    width: 40%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
