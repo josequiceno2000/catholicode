@@ -1,14 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    width: 40%;
-    margin: auto;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to left, #fffefc, #fff7ee);
+    color: #2c1d0c;
+    line-height: 1.6;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 h1 {
-    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: rgb(152, 0, 0);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-img {
-    width: 80%;
-    display: block;
-    margin: auto;
+p[data-key="language"] {
+    font-size: 1.2rem;
+    color: #aa5a00;
+    font-style: italic;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Select Dropdown Styling */
+select#language-select {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select#language-select:hover {
+    border-color: #e07b00;
+}
+
+/* Banner Image */
+#banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInBanner 2s ease-out;
+}
+
+/* Prayer Text */
+main p[data-key="prayer-text"] {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 800px;
+    color: #4e2500;
+    padding: 2rem 4rem;
+    background-color: #fffaf5;
+    border-left: 6px solid #aa5a00;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(244, 123, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBanner {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transfor: scale(1);
+    }
+}
+
+/* Responsive Desi */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    main p[data-key="prayer-text"] {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
 }
